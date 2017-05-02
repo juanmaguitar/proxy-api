@@ -1,8 +1,8 @@
-## API GiantBomb
+##API GiantBomb
 
 This repo contains the code for a proxy built to simplify the access to the API: https://comicvine.gamespot.com
 
-### Instructions
+###Instructions
 
 To use this API you must use this URL 
 
@@ -32,7 +32,7 @@ https://api-comic-vine.herokuapp.com/characters/?api_key=<%API-KEY%>&format=json
 
 Being `<%API-KEY%>` your own API Key needed to access this API (you must register first in the website https://comicvine.gamespot.com/)
 
-#### More examples
+####More examples
 
 ```
 https://api-comic-vine.herokuapp.com/search/?api_key=<%API-KEY%>&format=json&query=superman
