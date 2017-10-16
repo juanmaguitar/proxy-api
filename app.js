@@ -6,12 +6,16 @@ require('dotenv').load()
 
 const app = express()
 
-const { PORT, URL_BASE } = process.env
+const { PORT, URL_BASE, TOKEN } = process.env
 
 const options = {
   headers: {
     'User-Agent': 'request'
   }
+}
+
+if (TOKEN) {
+  options.headers.Authorization =  `Bearer ${TOKEN}`
 }
 
 const cache = {}
