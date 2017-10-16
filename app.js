@@ -39,13 +39,13 @@ app.get('*', function (req, res) {
 
   if (cache[options.url]) {
     console.log('💾 from cache...')
-    res.send(cache[options.url])
+    res.json(cache[options.url])
   } else {
     console.log('🔥 requesting: ' + options.url)
     request(options, function (error, response, body) {
       if (error) res.status(500).send('Something went wrong!')
       cache[options.url] = body
-      res.send(body)
+      res.json(body)
     })
   }
 })
