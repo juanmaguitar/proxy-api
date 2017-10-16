@@ -45,7 +45,7 @@ app.get('*', function (req, res) {
     request(options, function (error, response, body) {
       if (error) res.status(500).send('Something went wrong!')
       cache[options.url] = body
-      res.json(body)
+      res.json(body.replace(/\\/g,''))
     })
   }
 })
